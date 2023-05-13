@@ -1,8 +1,12 @@
-
+require 'capybara'
 require 'capybara/cucumber'
 require 'capybara/rspec'
 require 'site_prism'
 require 'rspec'
+require 'selenium-webdriver'
+require_relative 'hooks.rb'
+require_relative 'print.rb'
+World(Prints)
 
 Capybara.configure do |config|
     config.default_driver = :selenium_chrome
